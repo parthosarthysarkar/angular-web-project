@@ -16,8 +16,27 @@ public class ProductService implements IProductService {
 	
 	@Override
 	public List<Product> findAll() {
-		// TODO Auto-generated method stub
 		return productRepository.findAll();
+	}
+
+	@Override
+	public List<Product> findByName(String name) {
+		return productRepository.findByName(name);
+	}
+
+	@Override
+	public boolean addProduct(Product product) {
+		return productRepository.addProduct(product);
+	}
+
+	@Override
+	public void removeProduct(long id) {
+		productRepository.removeProduct(id);
+	}
+
+	@Override
+	public Product findById(long id) {
+		return productRepository.findById(id);
 	}
 
 }
